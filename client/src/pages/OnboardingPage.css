@@ -1,0 +1,255 @@
+/* ── Onboarding step dots ─────────────────────────────────────── */
+.onboard-card {
+  max-width: 520px;
+}
+
+.onboard-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.onboard-step-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1E1E2E;
+  border: 2px solid #3F3F5A;
+  color: #71717A;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.onboard-step-dot::after {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 2px;
+  background: #3F3F5A;
+}
+
+.onboard-step-dot:last-child::after {
+  display: none;
+}
+
+.onboard-step-dot.active {
+  background: #4F46E5;
+  border-color: #4F46E5;
+  color: white;
+}
+
+.onboard-step-dot.done {
+  background: #059669;
+  border-color: #059669;
+  color: white;
+}
+
+/* ── School search ───────────────────────────────────────────── */
+.onboard-selected-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1B1B2E;
+  border: 1.5px solid #4F46E5;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #E4E4F0;
+}
+
+.onboard-chip-clear {
+  background: none;
+  border: none;
+  color: #71717A;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.onboard-chip-clear:hover { color: #EF4444; }
+
+.onboard-dropdown {
+  margin-top: 4px;
+  background: #13131F;
+  border: 1px solid #2D2D44;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.onboard-dropdown-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #E4E4F0;
+  cursor: pointer;
+  border-bottom: 1px solid #1E1E2E;
+  transition: background 0.15s;
+}
+
+.onboard-dropdown-item:last-child { border-bottom: none; }
+.onboard-dropdown-item:hover { background: #1E1E2E; }
+
+.onboard-school-short {
+  color: #71717A;
+  font-size: 12px;
+}
+
+.onboard-dropdown-empty {
+  padding: 12px 14px;
+  color: #71717A;
+  font-size: 13px;
+}
+
+/* ── Department grid ─────────────────────────────────────────── */
+.onboard-dept-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.onboard-dept-btn {
+  background: #1B1B2E;
+  border: 1.5px solid #2D2D44;
+  border-radius: 8px;
+  color: #C4C4D4;
+  font-size: 13px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.onboard-dept-btn:hover {
+  border-color: #4F46E5;
+  color: white;
+}
+
+.onboard-dept-empty {
+  color: #52525B;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* ── Level grid ──────────────────────────────────────────────── */
+.onboard-level-grid {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.onboard-level-btn {
+  background: #1B1B2E;
+  border: 1.5px solid #2D2D44;
+  border-radius: 8px;
+  color: #C4C4D4;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: all 0.15s;
+  min-width: 60px;
+}
+
+.onboard-level-btn:hover  { border-color: #4F46E5; color: white; }
+.onboard-level-btn.active { background: #4F46E5; border-color: #4F46E5; color: white; }
+
+/* ── Course selection ────────────────────────────────────────── */
+.onboard-course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 340px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.onboard-course-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1B1B2E;
+  border: 1.5px solid #2D2D44;
+  border-radius: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.onboard-course-item:hover  { border-color: #4F46E5; }
+.onboard-course-item.selected { border-color: #4F46E5; background: #1E1B4B22; }
+
+.onboard-course-check {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: #4F46E5;
+  cursor: pointer;
+}
+
+.onboard-course-info { flex: 1; min-width: 0; }
+
+.onboard-course-code {
+  font-size: 12px;
+  font-weight: 700;
+  color: #818CF8;
+  letter-spacing: 0.04em;
+}
+
+.onboard-course-title {
+  font-size: 13px;
+  color: #C4C4D4;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.onboard-course-tick {
+  font-size: 14px;
+  color: #059669;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.onboard-course-tick.visible { opacity: 1; }
+
+.onboard-no-courses {
+  text-align: center;
+  padding: 24px;
+  color: #A1A1AA;
+  font-size: 14px;
+  background: #1B1B2E;
+  border-radius: 10px;
+  border: 1px dashed #3F3F5A;
+}
+
+.onboard-skip-courses {
+  display: block;
+  margin-top: 4px;
+  background: none;
+  border: none;
+  color: #52525B;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: underline;
+  width: 100%;
+}
+
+.onboard-skip-courses:hover { color: #71717A; }

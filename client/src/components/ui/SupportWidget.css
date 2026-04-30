@@ -1,0 +1,122 @@
+.support-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: white;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-brand);
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.support-fab:hover {
+  background: var(--brand-dark);
+  transform: scale(1.08);
+}
+
+.support-popup {
+  position: fixed;
+  bottom: 88px;
+  right: 24px;
+  width: 300px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: 901;
+  overflow: hidden;
+  animation: fadeUp 0.2s ease both;
+}
+
+.support-popup-header {
+  padding: 16px 18px;
+  background: var(--brand);
+}
+
+.support-popup-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3px;
+}
+
+.support-popup-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+}
+
+.support-popup-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.support-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+}
+
+.support-option:hover { background: var(--surface-2); }
+.support-option:last-child { border-bottom: none; }
+
+.support-option--wa:hover { background: #F0FDF4; }
+
+.support-option-icon { font-size: 20px; flex-shrink: 0; }
+
+.support-option-text { flex: 1; }
+
+.support-option-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.support-option-sub {
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+.support-option-arrow {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.support-popup-footer {
+  padding: 10px 18px;
+  font-size: 11px;
+  color: var(--ink-soft);
+  background: var(--surface-2);
+  text-align: center;
+}
+
+.support-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 899;
+}
+
+@media (max-width: 480px) {
+  .support-popup {
+    right: 16px;
+    width: calc(100vw - 32px);
+    bottom: 84px;
+  }
+  .support-fab {
+    bottom: 20px;
+    right: 16px;
+  }
+}
